@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Checklist</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <section id="todo">
+            <div class="title">
+                <p class="check">TODO</p>
+            </div>
+            <div class="input-container">
+                <div>
+                    <input type="text" class="do" placeholder="What needs to be done" onkeypress="clickPress(event)">
+                </div>
+                <div>
+                      <input type="button" class="add" value="ADD" onclick="add()" >
+                </div>
+            
+              
+            </div>
+                <div class="todo-container">
+                    <input type="button" class="add move" value="Move selected items" onclick="move()">
+                         <ul class="onhold"></ul>
+                </div>
+        </section>
+
+        <section id="progress">
+            <div class="title">
+                <p class="check">IN PROGRESS</p>
+            </div>
+            <div class="progress-container">
+                <input type="button" class="add move" value="Move selected items" onclick="moveDone()">
+                     <ul class="inprogress"></ul>
+            </div>
+           
+        </section>
+
+        <section id="done">
+            <div class="title">
+                <p class="check">DONE</p>
+                <div class="done-container">
+                    <input type="button" class="add move" value="Move items back" onclick="move()">
+                         <ul class="done"></ul>
+                </div>
+                </div>
+        </section>
+    </div>
+</body>
+<script src="index.js"></script>
+</html>
