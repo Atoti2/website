@@ -7,6 +7,9 @@ const todo = document.querySelector(".do")
 
 //ADD ITEMS TO TODO LIST
 
+
+
+
 let toMove = [];
 
 function add() {
@@ -29,6 +32,15 @@ function add() {
             }
         })
         todo.value = ''
+    }
+}
+
+function remove(){
+    for (let i = 0; i < toMove.length; i++) {
+        if (toMove[i].classList.contains('selected')) {
+            const li = toMove[i]
+            li.classList.add('deleted')
+        }
     }
 }
 
